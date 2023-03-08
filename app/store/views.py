@@ -12,3 +12,7 @@ def home(request):
 
 def about(request):
     return render(request, "store/about.html")
+
+
+def products(request):
+    return render(request, "store/products.html")
