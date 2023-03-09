@@ -16,3 +16,10 @@ def about(request):
 
 def products(request):
     return render(request, "store/products.html")
+
+
+def blog(request):
+    return render(request, "store/blog.html")
+
+def blog_details(request):
+    return render(request, "store/blog-details.html")
