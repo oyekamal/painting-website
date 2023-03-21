@@ -1,0 +1,13 @@
+{% extends "base/base.html" %}
+
+
+{% block content %}
+  <h1>{{ painting.title }}</h1>
+  <p>By {{ painting.artist }}</p>
+  <img src="{{ painting.image.url }}" alt="{{ painting.title }}">
+  <p>Description: {{ painting.description }}</p>
+  <p>Size: {{ painting.size }}</p>
+  <p>Price: {{ painting.price }}</p>
+  <p>Categories: {% for category in painting.categories.all %}{{ category.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <p>Tags: {% for tag in painting.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+{% endblock %}
